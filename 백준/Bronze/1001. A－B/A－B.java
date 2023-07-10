@@ -1,18 +1,9 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
-
 public class Main {
 
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-		String str = br.readLine();
-		StringTokenizer st = new StringTokenizer(str, " ");
-		int a = Integer.parseInt(st.nextToken());
-		int b = Integer.parseInt(st.nextToken());
-
+	public static void main(String[] args) throws java.io.IOException {
+		int a = System.in.read() - '0';
+		System.in.read(); // 한 번에 하나의 문자(바이트)만을 읽어들입니다.
+		int b = System.in.read() - '0';
 		System.out.println(a - b);
 
 	}
