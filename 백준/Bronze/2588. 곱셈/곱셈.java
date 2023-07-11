@@ -1,16 +1,31 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int a = sc.nextInt();
-		String b = sc.next();
 
-		sc.close();
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int a = Integer.parseInt(br.readLine());
+		int b = Integer.parseInt(br.readLine());
 
-		System.out.println(a * (b.charAt(2) - '0')); // 문자열을 정수로 변환
-		System.out.println(a * (b.charAt(1) - '0')); // 문자열을 정수로 변환
-		System.out.println(a * (b.charAt(0) - '0')); // 문자열을 정수로 변환
-		System.out.println(a * Integer.parseInt(b)); // 'b' 문자열을 정수로 변환 후 곱셈
+		br.close();
+
+		StringBuilder sb = new StringBuilder();
+
+		sb.append(a * (b % 10));
+		sb.append('\n');
+
+		sb.append(a * ((b % 100) / 10));
+		sb.append('\n');
+
+		sb.append(a * (b / 100));
+		sb.append('\n');
+
+		sb.append(a * b);
+
+		System.out.print(sb);
+
 	}
 }
