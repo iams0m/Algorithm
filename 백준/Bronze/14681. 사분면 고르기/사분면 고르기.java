@@ -1,13 +1,12 @@
-import java.util.Scanner;
+import java.io.*;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 
-		int a = sc.nextInt();
-		int b = sc.nextInt();
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		sc.close();
+		int a = Integer.parseInt(br.readLine());
+		int b = Integer.parseInt(br.readLine());
 
 		if (a > 0 && b > 0) {
 			System.out.println("1");
@@ -18,5 +17,6 @@ public class Main {
 		} else {
 			System.out.println("4");
 		}
+
 	}
 }
