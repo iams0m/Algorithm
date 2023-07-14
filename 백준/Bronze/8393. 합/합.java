@@ -8,7 +8,10 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		int n = Integer.parseInt(br.readLine());
-
-		System.out.println((n * (n + 1)) / 2);
+        	int sum = 0;
+		for (int i = 1; i <= n; i++) {
+			sum += i;
+		}
+		System.out.println(sum);
 	}
 }
