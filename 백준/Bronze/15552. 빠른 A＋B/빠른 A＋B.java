@@ -10,13 +10,14 @@ public class Main {
 		int T = Integer.parseInt(br.readLine());
 
 		StringTokenizer st;
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 
 		for (int i = 0; i < T; i++) {
 			st = new StringTokenizer(br.readLine(), " ");
-			sb.append(Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken()));
-			sb.append('\n');
+			sb.append(Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken())).append('\n');
 		}
+		br.close();
+
 		System.out.println(sb);
 	}
 }
