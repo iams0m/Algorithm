@@ -8,15 +8,18 @@ public class Main {
 		int N = Integer.parseInt(br.readLine());
 		br.close();
 
+		StringBuilder sb = new StringBuilder();
+
 		for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= N - i; j++) {
-				System.out.print(" ");
+				sb.append(" ");
 			}
             
 			for (int k = 1; k <= i; k++) {
-				System.out.print("*");
+				sb.append('*');
 			}
-			System.out.println();
+			sb.append('\n');
 		}
+		System.out.print(sb);
 	}
 }
