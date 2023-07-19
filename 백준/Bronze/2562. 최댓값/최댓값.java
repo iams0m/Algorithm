@@ -11,16 +11,17 @@ public class Main {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = Integer.parseInt(br.readLine());
 		}
+		
 		int max = arr[0];
-        int idx = 0;
+        	int idx = 0;
 
 		for (int i = 0; i < arr.length; i++) {
 			if (max < arr[i]) {
 				max = arr[i];
-				idx = i;
+				idx = i + 1;
 			}
 		}
 		System.out.println(max);
-		System.out.println(idx + 1);
+		System.out.println(idx);
 	}
 }
