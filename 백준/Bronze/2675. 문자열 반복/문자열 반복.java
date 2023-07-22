@@ -14,10 +14,11 @@ public class Main {
 
 			for (int j = 0; j < S.length(); j++) {
 				for (int k = 0; k < R; k++) {
-					System.out.print(S.charAt(j));
+					sb.append(S.charAt(j));
 				}
 			}
-			System.out.println();
+			sb.append("\n");
 		}
+		System.out.print(sb);
 	}
 }
