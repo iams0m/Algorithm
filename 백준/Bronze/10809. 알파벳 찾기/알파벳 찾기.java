@@ -15,8 +15,8 @@ public class Main {
 		for (int j = 0; j < s.length(); j++) {
 			char ch = s.charAt(j);
 
-			if (arr[ch - 97] == -1) {
-				arr[ch - 97] = j;
+			if (arr[ch - 97] == -1) { // 처음 등장하는 경우
+				arr[ch - 97] = j; // 처음 등장하는 위치 출력
 			}
 		}
 		for (int val : arr) {
