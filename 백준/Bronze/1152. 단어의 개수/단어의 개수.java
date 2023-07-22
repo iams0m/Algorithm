@@ -1,10 +1,33 @@
 import java.io.*;
-import java.util.*;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine(), " "); // 공백을 기준으로 나눈 토큰들을 st에 저장
-		System.out.print(st.countTokens()); // countTokens() : 토큰의 개수 반환
+		int count = 0;
+		int pre_str = 32; // 공백 의미
+		int str;
+
+		while (true) {
+			str = System.in.read();
+
+			// 입력받은 문자가 공백일 때
+			if (str == 32) {
+				// 이전의 문자가 공백이 아니면
+				if (pre_str != 32)
+					count++;
+			}
+
+			// 입력받은 문자가 개행일 때 ('\n')
+			else if (str == 10) {
+				// 이전의 문자가 공백이 아니면
+				if (pre_str != 32)
+					count++;
+				break;
+			}
+
+			pre_str = str;
+
+		}
+
+		System.out.println(count);
 	}
 }
