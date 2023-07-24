@@ -2,7 +2,7 @@ import java.io.*;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
-		// 방법 1(if문)
+		// 방법 1(if문과 System.in.read()로 입력값 받기)
 		int count = 0;
 		int value;
 
@@ -31,7 +31,7 @@ public class Main {
 		}
 		System.out.println(count);
 
-		// 방법 2(switch-case)
+		// 방법 2(switch-case와 BufferReader로 입력값 받기)
 		// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		// String str = br.readLine();
 		// int count = 0;
