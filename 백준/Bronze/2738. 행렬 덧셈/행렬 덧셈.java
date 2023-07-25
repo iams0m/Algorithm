@@ -1,37 +1,40 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		int N = Integer.parseInt(st.nextToken());
-		int M = Integer.parseInt(st.nextToken());
+		String[] size = br.readLine().split(" ");
+		int N = Integer.parseInt(size[0]);
+		int M = Integer.parseInt(size[1]);
 
 		int[][] A = new int[N][M];
 		int[][] B = new int[N][M];
 
 		for (int i = 0; i < N; i++) {
-			st = new StringTokenizer(br.readLine());
+			String[] input = br.readLine().split(" ");
 			for (int j = 0; j < M; j++) {
-				A[i][j] = Integer.parseInt(st.nextToken());
+				A[i][j] = Integer.parseInt(input[j]);
 			}
 		}
 
 		for (int i = 0; i < N; i++) {
-			st = new StringTokenizer(br.readLine());
+			String[] input = br.readLine().split(" ");
 			for (int j = 0; j < M; j++) {
-				B[i][j] = Integer.parseInt(st.nextToken());
+				B[i][j] = Integer.parseInt(input[j]);
 			}
 		}
 
 		StringBuilder sb = new StringBuilder();
+		// 결과 출력
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < M; j++) {
 				sb.append((A[i][j] + B[i][j]) + " ");
 			}
-			sb.append('\n');
+			sb.append(System.lineSeparator());
 		}
-		System.out.println(sb.toString());
+
+		System.out.print(sb);
 	}
 }
