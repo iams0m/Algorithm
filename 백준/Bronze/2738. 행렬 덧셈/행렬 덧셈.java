@@ -8,10 +8,11 @@ public class Main {
 		String[] size = br.readLine().split(" ");
 		int N = Integer.parseInt(size[0]);
 		int M = Integer.parseInt(size[1]);
-
+		
 		int[][] A = new int[N][M];
 		int[][] B = new int[N][M];
 
+		// 배열 A 입력 받기
 		for (int i = 0; i < N; i++) {
 			String[] input = br.readLine().split(" ");
 			for (int j = 0; j < M; j++) {
@@ -19,6 +20,7 @@ public class Main {
 			}
 		}
 
+		// 배열 B 입력 받기
 		for (int i = 0; i < N; i++) {
 			String[] input = br.readLine().split(" ");
 			for (int j = 0; j < M; j++) {
