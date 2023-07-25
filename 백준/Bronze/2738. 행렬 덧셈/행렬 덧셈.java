@@ -30,7 +30,7 @@ public class Main {
 		// 결과 출력
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < M; j++) {
-				sb.append((A[i][j] + B[i][j]) + " ");
+				sb.append(A[i][j] + B[i][j]).append(" ");
 			}
 			sb.append(System.lineSeparator());
 		}
