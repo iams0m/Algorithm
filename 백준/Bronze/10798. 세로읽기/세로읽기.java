@@ -9,7 +9,12 @@ public class Main {
 		// 5줄에 각각 문자열을 입력받고 가장 긴 문자열의 길이를 구함
 		for (int i = 0; i < ch.length; i++) {
 			String str = br.readLine();
+			// 최댓값 구하는 방법 1
 			max = Math.max(max, str.length());
+			// 최댓값 구하는 방법 2
+			// if (str.length() > max) {
+			// 	max = str.length();
+			// }
 			for (int j = 0; j < str.length(); j++) {
 				ch[i][j] = str.charAt(j); // 문자열을 문자 단위로 2차원 배열에 저장
 			}
