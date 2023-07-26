@@ -8,9 +8,7 @@ public class Main {
 
 		for (int i = 0; i < ch.length; i++) {
 			String str = br.readLine();
-			if (str.length() > max) {
-				max = str.length();
-			}
+			max = Math.max(max, str.length());
 			for (int j = 0; j < str.length(); j++) {
 				ch[i][j] = str.charAt(j);
 			}
