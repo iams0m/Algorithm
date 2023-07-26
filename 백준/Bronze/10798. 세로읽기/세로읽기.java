@@ -15,6 +15,8 @@ public class Main {
 			// if (str.length() > max) {
 			// 	max = str.length();
 			// }
+			// 최댓값 구하는 방법 3
+			// max = str.length() > max ? str.length() : max;
 			for (int j = 0; j < str.length(); j++) {
 				ch[i][j] = str.charAt(j); // 문자열을 문자 단위로 2차원 배열에 저장
 			}
