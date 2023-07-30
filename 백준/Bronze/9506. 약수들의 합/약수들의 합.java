@@ -7,7 +7,8 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 		StringTokenizer st;
 
-		int n = Integer.parseInt(br.readLine()), sum = 0;
+		int n = Integer.parseInt(br.readLine());
+		int sum = 0;
 		while (n != -1) {
 			sb.setLength(0);
 			sb.append(n + " = 1");
