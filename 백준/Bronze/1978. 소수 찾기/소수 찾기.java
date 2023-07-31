@@ -3,6 +3,7 @@ import java.util.*;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
+		// 제곱근을 이용한 기본 소수 판별법 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		// 입력값으로 들어오는 숫자의 개수를 무시하고, 개수를 저장할 count 변수를 0으로 초기화
