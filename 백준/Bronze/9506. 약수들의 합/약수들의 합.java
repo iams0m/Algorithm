@@ -26,11 +26,9 @@ public class Main {
             }
 
             // 합이 n과 같으면 완전수(Perfect Number)이므로 해당 값을 출력
-            // 완전수는 자신을 제외한 약수들의 합이 자기 자신과 같은 수를 의미함
             if (sum == n) {
                 System.out.println(sb);
             } else {
-                // 합이 n과 다르면 완전수가 아니므로 해당 값을 출력
                 System.out.println(n + " is NOT perfect.");
             }
 
