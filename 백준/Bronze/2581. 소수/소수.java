@@ -38,7 +38,7 @@ public class Main {
 
     }
 
-    // 에라토스테네스 체 알고리즘을 구현한 메드
+    // 에라토스테네스 체 알고리즘
     public static void get_prime() {
         // 0과 1은 소수가 아니므로 true로 표시
         prime[0] = true;
