@@ -41,5 +41,19 @@ public class Main {
 		// 	sb.append(N);
 		// }
 		// System.out.println(sb);
+
+		// 3. Scanner + System.out.println()
+		// Scanner sc = new Scanner(System.in);
+		// int N = sc.nextInt();
+
+		// for (int i = 2; i <= Math.sqrt(N); i++) {
+		// 	while (N % i == 0) {
+		// 		System.out.println(i);
+		// 		N /= i;
+		// 	}
+		// }
+		// if (N != 1) {
+		// 	System.out.println(N);
+		// }
 	}
 }
