@@ -23,5 +23,23 @@ public class Main {
 		}
 		
 		System.out.println(sb);
+		
+		// 2. Scanner + StringBuilder
+		// Scanner sc = new Scanner(System.in);
+
+		// StringBuilder sb = new StringBuilder();
+
+		// int N = sc.nextInt();
+
+		// for (int i = 2; i <= Math.sqrt(N); i++) { // 또는 i * i <= N
+		// 	while (N % i == 0) {
+		// 		sb.append(i).append('\n');
+		// 		N /= i;
+		// 	}
+		// }
+		// if (N != 1) {
+		// 	sb.append(N);
+		// }
+		// System.out.println(sb);
 	}
 }
