@@ -16,6 +16,7 @@ public class Main {
 			y[i] = Integer.parseInt(st.nextToken());
 		}
 
+		// x 좌표 중 2개가 같으면, 다른 하나를 출력
 		if (x[0] == x[1]) {
 			sb.append(x[2]);
 		} else if (x[0] == x[2]) {
@@ -26,6 +27,7 @@ public class Main {
 
 		sb.append(" ");
 
+		// y 좌표 중 2개가 같으면, 다른 하나를 출력
 		if (y[0] == y[1]) {
 			sb.append(y[2]);
 		} else if (y[0] == y[2]) {
