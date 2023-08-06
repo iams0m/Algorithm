@@ -18,7 +18,7 @@ public class Main {
 
 			int max = Math.max(Math.max(A, B), C);
 
-			// 삼각형 조건을 만족하지 못하는 경우
+			// 삼각형 조건을 만족하지 못하는 경우 - A가 가장 긴 변일 떄
 			if (max == A) {
 				if (A >= B + C) {
 					System.out.println("Invalid");
@@ -26,6 +26,7 @@ public class Main {
 				}
 			}
 
+			// 삼각형 조건을 만족하지 못하는 경우 - B가 가장 긴 변일 떄
 			if (max == B) {
 				if (B >= A + C) {
 					System.out.println("Invalid");
@@ -33,6 +34,7 @@ public class Main {
 				}
 			}
 
+			// 삼각형 조건을 만족하지 못하는 경우 - C가 가장 긴 변일 떄
 			if (max == C) {
 				if (C >= A + B) {
 					System.out.println("Invalid");
