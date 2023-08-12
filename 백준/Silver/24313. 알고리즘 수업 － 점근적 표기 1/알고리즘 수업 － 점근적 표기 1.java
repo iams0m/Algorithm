@@ -12,7 +12,10 @@ public class Main {
 		int c = Integer.parseInt(br.readLine());
 		int n0 = Integer.parseInt(br.readLine());
 
-		int result = a1 * n0 + a0 <= c * n0 && c >= a1 ? 1 : 0;
-		System.out.println(result);
+		if (a1 * n0 + a0 <= c * n0 && c >= a1) {
+			System.out.println(1);
+		} else {
+			System.out.println(0);
+		}
 	}
 }
