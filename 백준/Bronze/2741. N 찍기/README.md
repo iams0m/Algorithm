@@ -4,7 +4,8 @@
 
 ### 성능 요약
 
-메모리: 18132 KB, 시간: 212 ms
+<p>StringBuilder를 사용했을 때 ➡ 메모리: 18132 KB, 시간: 212 ms</p>
+<p>System.out.println을 사용했을 때 ➡ 메모리: 29064 KB, 시간: 932 ms</p>
 
 ### 분류
 
