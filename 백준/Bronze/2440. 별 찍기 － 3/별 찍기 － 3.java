@@ -13,6 +13,6 @@ public class Main {
 			}
 			sb.append('\n');
 		}
-		System.out.print(sb);
+		System.out.print(sb); // StringBuilder 자체에 toString이 Overriding 되어있어 sb.toString()을 하지 않아도 출력 가능
 	}
 }
