@@ -1,10 +1,9 @@
 import java.io.*;
-import java.util.*;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int n = Integer.parseInt(br.readLine());
 
 		// 첫 줄
 		for (int i = 1; i < n; i++) {
@@ -34,5 +33,7 @@ public class Main {
 			}
 			System.out.println();
 		}
+
+		br.close();
 	}
 }
