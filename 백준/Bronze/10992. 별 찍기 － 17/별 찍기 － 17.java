@@ -1,39 +1,34 @@
 import java.io.*;
+import java.util.*;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int n = Integer.parseInt(br.readLine());
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		StringBuffer sb = new StringBuffer();
+		int n = Integer.parseInt(st.nextToken());
 
-		// 첫 줄
-		for (int i = 1; i < n; i++) {
-			System.out.print(" ");
-		}
-		System.out.println("*");
-
-		// 중간 줄
-		for (int i = 2; i < n; i++) {
-			// 앞 공백
-			for (int j = n - i; j > 0; j--) {
-				System.out.print(" ");
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < (-1) * i + n - 1; j++) {
+				sb.append(" ");
 			}
-			System.out.print("*");
+			sb.append("*");
 
-			// 가운데 공백
-			for (int j = 1; j <= 2 * (i - 1) - 1; j++) {
-				System.out.print(" ");
+			if (i == n - 1) {
+				for (int j = 0; j < 2 * n - 2; j++) {
+					sb.append("*");
+				}
+			} else if (i != 0) {
+				if (i != n - 1) {
+					for (int j = 0; j < 2 * i - 1; j++) {
+						sb.append(" ");
+					}
+				}
+				sb.append("*");
 			}
-			System.out.println("*");
-		}
 
-		// 마지막 줄 (n == 1 일 경우 출력 안함)
-		if (n != 1) {
-			for (int i = 1; i <= 2 * n - 1; i++) {
-				System.out.print("*");
-			}
-			System.out.println();
+			sb.append("\n");
 		}
-
-		br.close();
+		System.out.println(sb);
 	}
 }
