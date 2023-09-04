@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
 		int N = Integer.parseInt(br.readLine());
 		int[] A = new int[N];
 		for (int i = 0; i < N; i++) {
@@ -21,7 +22,8 @@ public class Main {
 			}
 		}
 		for (int i = 0; i < N; i++) {
-			System.out.println(A[i]);
+		    sb.append(A[i]).append('\n');
 		}
+		System.out.println(sb);
 	}
 }
