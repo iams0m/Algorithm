@@ -49,6 +49,8 @@ Inflearn 하루코딩 - Do it! 알고리즘 코딩테스트 with JAVA https://bi
 
 3. 인접한 부분 리스트끼리 정렬하여 합친다. (Conqure : 정복)
 
+<img src="https://github.com/iams0m/Algorithm/assets/105639531/c2152e13-68e4-4174-a047-50d11f484e16.gif"/>
+
 </details>
 
 </br>
