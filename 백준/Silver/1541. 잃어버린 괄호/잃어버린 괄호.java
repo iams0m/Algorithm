@@ -18,7 +18,7 @@ public class Main {
 	}
 	private static int mySum(String example) {
 		int sum = 0;
-		String[] temp = example.split("[+]");
+		String[] temp = example.split("\\+");
 		for (int i = 0; i < temp.length; i++) {
 			sum = sum + Integer.parseInt(temp[i]);
 		}
