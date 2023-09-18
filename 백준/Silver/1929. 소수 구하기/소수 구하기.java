@@ -17,10 +17,12 @@ public class Main {
 				A[j] = 0;
 			}
 		}
+		StringBuilder sb = new StringBuilder();
 		for (int i = M; i <= N; i++) {
 			if (A[i] != 0) {
-				System.out.println(A[i]);
+				sb.append(i).append('\n');
 			}
 		}
+		System.out.print(sb);
 	}
 }
