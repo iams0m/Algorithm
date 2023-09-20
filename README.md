@@ -205,7 +205,7 @@ Inflearn 하루코딩 - Do it! 알고리즘 코딩테스트 with JAVA https://bi
 
 <br>
 
-## 오일러 피(Euler's phi)
+## 오일러 피(Euler's Totient)
 * 1부터 N까지 범위에서 N과 서로소인 자연수의 개수
 > 서로소 관계: 두 수 a, b의 공약수가 1뿐인 두 정수를 의미
 
