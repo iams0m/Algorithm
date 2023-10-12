@@ -1,20 +1,25 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		sc.close();
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.parseInt(br.readLine());
+		br.close();
 
-		for (int i = 1; i <= n; ++i) {
-			for (int j = 1; j <= i - 1; ++j) {
-				System.out.print(" ");
+		StringBuilder sb = new StringBuilder();
+
+		for (int i = N; i >= 1; i--) {
+            for (int j = 1; j <= N - i; j++) {
+				sb.append(" ");
 			}
-			for (int j = 1; j <= n - i + 1; ++j) {
-				System.out.print("*");
+            
+			for (int k = 1; k <= i; k++) {
+				sb.append('*');
 			}
-			System.out.println();
+			sb.append('\n');
 		}
+		System.out.print(sb);
 	}
 }
