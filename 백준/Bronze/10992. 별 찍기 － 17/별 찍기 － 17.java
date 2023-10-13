@@ -4,31 +4,28 @@ import java.util.*;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		StringBuffer sb = new StringBuffer();
-		int n = Integer.parseInt(st.nextToken());
+		int N = Integer.parseInt(br.readLine());
+        br.close();
+        
+        StringBuilder sb = new StringBuilder();
 
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < (-1) * i + n - 1; j++) {
-				sb.append(" ");
-			}
-			sb.append("*");
+        for (int i = 1; i <= N; i++) {
+            if (i == N) {
+                sb.append("*".repeat(2 * i - 1));
+                break;
+            }
+            
+            sb.append(" ".repeat(N - i));
 
-			if (i == n - 1) {
-				for (int j = 0; j < 2 * n - 2; j++) {
-					sb.append("*");
-				}
-			} else if (i != 0) {
-				if (i != n - 1) {
-					for (int j = 0; j < 2 * i - 1; j++) {
-						sb.append(" ");
-					}
-				}
-				sb.append("*");
-			}
-
-			sb.append("\n");
-		}
-		System.out.println(sb);
+            if (i == 1) {
+                sb.append("*");
+            } else {
+                sb.append("*");
+                sb.append(" ".repeat(2 * (i - 1) - 1));
+                sb.append("*");
+            }
+            sb.append("\n");
+        }
+        System.out.println(sb.toString());
 	}
 }
