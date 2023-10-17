@@ -43,7 +43,7 @@ public class Main {
 }
 
 // 방법2 - Top-Down 방식
-public class Mainn {
+public class Main {
 
 	static Long[][] dp;
 	static int N;
