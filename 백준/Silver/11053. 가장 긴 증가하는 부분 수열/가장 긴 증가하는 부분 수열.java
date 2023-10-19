@@ -3,6 +3,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+// 방법 1 - Top-Down 방식
+
 public class Main {
 
     static int[] seq;
@@ -49,5 +51,42 @@ public class Main {
             }
         }
         return dp[N];
+    }
+}
+
+// 방법 2 - Bottom-Up 방식
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+
+        int[] seq = new int[N];
+        int[] dp = new int[N];
+
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        for (int i = 0; i < N; i++) {
+            seq[i] = Integer.parseInt(st.nextToken());
+        }
+
+        for (int i = 0; i < N; i++) {
+            dp[i] = 1;
+
+            for (int j = 0; j < i; j++) {
+                if (seq[j] < seq[i] && dp[i] < dp[j] + 1) {
+                    dp[i] = dp[j] + 1;
+                }
+            }
+        }
+
+        // 최댓값 찾기
+        int max = -1;
+        for (int i = 0; i < N; i++) {
+            if (dp[i] > max) {
+                max = dp[i];
+            }
+        }
+        System.out.print(max);
     }
 }
