@@ -4,17 +4,17 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Main {
-
-    static Integer[] r_dp;
-    static Integer[] l_dp;
+    static int N;
     static int[] seq;
+    static int[] r_dp;
+    static int[] l_dp;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
+        N = Integer.parseInt(br.readLine());
 
-        r_dp = new Integer[N];
-        l_dp = new Integer[N];
+        r_dp = new int[N];
+        l_dp = new int[N];
         seq = new int[N];
 
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -23,47 +23,38 @@ public class Main {
             seq[i] = Integer.parseInt(st.nextToken());
         }
 
+        LIS();
+        LDS();
+
+        int max = 0;
         for (int i = 0; i < N; i++) {
-            LIS(i);
-            LDS(i);
+            if (max < r_dp[i] + l_dp[i]) {
+                max = r_dp[i] + l_dp[i];
+            }
+        }
+        System.out.print(max - 1);
         }
 
-        int max = -1;
+
+    static void LIS() {
         for (int i = 0; i < N; i++) {
-            max = Math.max(r_dp[i] + l_dp[i], max);
-        }
-
-        System.out.println(max - 1);
-
-    }
-
-    static int LIS(int N) {
-        // 탐색 하지 않은 위치의 경우
-        if (r_dp[N] == null) {
-            // 1로 초기화
-            r_dp[N] = 1;
-
-            for (int i = N - 1; i >= 0; i--) {
-                if (seq[i] < seq[N]) {
-                    r_dp[N] = Math.max(r_dp[N], LIS(i) + 1);
+            r_dp[i] = 1;
+            for (int j = 0; j < i; j++) {
+                if (seq[j] < seq[i] && r_dp[i] < r_dp[j] + 1) {
+                    r_dp[i] = r_dp[j] + 1;
                 }
             }
         }
-        return r_dp[N];
     }
 
-    static int LDS(int N) {
-        // 탐색 하지 않은 위치의 경우
-        if (l_dp[N] == null) {
-            // 1로 초기화
-            l_dp[N] = 1;
-
-            for (int i = N + 1; i < l_dp.length; i++) {
-                if (seq[i] < seq[N]) {
-                    l_dp[N] = Math.max(l_dp[N], LDS(i) + 1);
+    static void LDS() {
+        for (int i = N - 1; i >= 0; i--) {
+            l_dp[i] = 1;
+            for (int j = N - 1; j > i; j--) {
+                if (seq[j] < seq[i] && l_dp[i] < l_dp[j] + 1) {
+                    l_dp[i] = l_dp[j] + 1;
                 }
             }
         }
-        return l_dp[N];
     }
 }
