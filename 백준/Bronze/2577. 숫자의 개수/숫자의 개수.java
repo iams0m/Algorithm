@@ -7,17 +7,18 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+        int[] arr = new int[10];
+
         int value = Integer.parseInt(br.readLine()) * Integer.parseInt(br.readLine()) * Integer.parseInt(br.readLine());
+
         String str = String.valueOf(value);
 
-        for (int i = 0; i < 10; i++) {
-            int count = 0;
-            for (int j = 0; j < str.length(); j++) {
-                if ((str.charAt(j) - '0') == i) {
-                    count++;
-                }
-            }
-            System.out.println(count);
+        for (int i = 0; i < str.length(); i++) {
+            arr[(str.charAt(i) - '0')]++;
+        }
+
+        for (int v = 0; v < arr.length; v++) {
+            System.out.println(arr[v]);
         }
     }
 }
