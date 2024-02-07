@@ -19,18 +19,18 @@ public class Main {
         }
 
         int max = -1;
-        char ch = '?';
+        int answer = -2;
 
         for (int i = 0; i < 26; i++) {
             if (arr[i] > max) {
                 max = arr[i];
-                ch = (char) (i + 65);
+                answer = i;
             } else if (arr[i] == max) {
-                ch = '?';
+                answer = -2;
             }
         }
 
-        System.out.print(ch);
+        System.out.print((char) (answer + 65));
 
     }
 }
