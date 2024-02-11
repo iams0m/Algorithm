@@ -9,12 +9,15 @@ public class Main {
                 check[n] = true;
             }
         }
+        
+        StringBuilder sb = new StringBuilder();
 
         for (int i = 1; i <= 10000; i++) {
             if (!check[i]) {
-                System.out.println(i);
+                sb.append(i).append('\n');
             }
         }
+        System.out.print(sb);
     }
 
     public static int d(int num) {
