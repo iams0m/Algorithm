@@ -20,6 +20,11 @@ public class Main {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
+        int result = search(arr, N, M);
+        System.out.print(result);
+    }
+
+    static int search(int[] arr, int N, int M) {
         int result = 0;
 
         for (int i = 0; i < N - 2; i++) {
@@ -38,6 +43,6 @@ public class Main {
                 }
             }
         }
-        System.out.print(result);
+        return result;
     }
 }
